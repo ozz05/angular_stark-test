@@ -1,0 +1,6 @@
+<div>
+    <ul>
+        <app-menu-item [id]="'home'" [label]="'Home'" [selected]="selectedItem === 'home'" (clicked)="onMenuItemSelected($event)" />
+        <app-menu-item [id]="'collections'" [label]="'Collections'" [selected]="selectedItem === 'collections'" (clicked)="onMenuItemSelected($event)"  />
+    </ul>
+</div>

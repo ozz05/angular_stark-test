@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    flex-direction: column; /* stack top-menu on top */
+    height: 100vh; /* full screen height */
+    width: 100%;   /* use 100% instead of 100vw to avoid scrollbar issue */
+    overflow: hidden; /* remove unwanted scrollbars */
+    box-sizing: border-box;
+}
+
+/* Reset defaults */
+:host, ::ng-deep body, ::ng-deep html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Top menu */
+app-top-menu {
+    height: 10%; /* adjust height as needed */
+    width: 100%;
+    background-color: #f6f6eb;
+}
+
+/* Main content area */
+.content {
+    display: flex;
+    flex: 1; /* take remaining height */
+    width: 100%;
+    overflow: hidden; /* prevent children from causing scroll */
+}
+
+/* Side menu */
+app-side-menu {
+    flex: 0 0 25%; /* fixed 25% width, no shrink */
+    background-color: #ffffff;
+    overflow: auto; /* allow inner scroll if content overflows */
+}
+
+/* Main display */
+app-main-display {
+    flex: 1; /* take remaining width */
+    background-color: #fff;
+    overflow: auto; /* allow scrolling inside if content is too large */
+}

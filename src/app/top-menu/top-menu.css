@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+  justify-content: center; /* center the inner content */
+  align-items: center;
+  width: 100%;
+  background-color: #f6f6eb;
+  box-sizing: border-box;
+}
+
+/* Limit inner content to 70% */
+.top-menu {
+  display: flex;
+  justify-content: space-between; /* logo+menu left, logIn right */
+  align-items: center;
+  width: 70%; /* this makes everything inside take 70% */
+}
+
+/* Menu and LogIn lists */
+.menu ul,
+.logIn ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu img {
+  height: 40px;
+  margin-right: 16px;
+}
+
+/* Button styling */
+button {
+  background: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #381fd1;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+button:hover {
+  border-color: #381fd1;
+}

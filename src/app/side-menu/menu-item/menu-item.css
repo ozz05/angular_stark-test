@@ -1,0 +1,20 @@
+/* Button styling */
+button {
+    background: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #aca9c0;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+button:hover {
+    color: #381fd1;
+}
+
+.active
+{
+    color: #381fd1;
+}
