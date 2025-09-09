@@ -19,3 +19,14 @@ button:hover {
 {
     color: #381fd1;
 }
+
+.submenu {
+  list-style: none;
+  margin: 5% 0 0 5%; /* margen superior y a la izquierda */
+  padding: 0;
+}
+
+.submenu app-menu-item {
+  display: block;
+  margin-left: 5%;  /* sangría para verse de nivel inferior */
+}

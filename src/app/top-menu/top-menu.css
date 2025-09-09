@@ -34,13 +34,32 @@ button {
   background: none;
   border: 2px solid transparent;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;          /* close to your reference */
+  font-weight: bold;         /* bold */
+  text-transform: uppercase;/* make text all caps */
+  letter-spacing: 0px;    /* a bit more space between letters */
+  font-family: sans-serif; /* clean sans-serif */
   color: #381fd1;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 4px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 button:hover {
   border-color: #381fd1;
+}
+
+button.trial {
+    background-color: #381fd1; /* blue */
+    color: white;              /* text color */
+    border: none;              /* optional: remove default border */
+    padding: 0.5rem 1rem;      /* optional: size */
+    border-radius: 0.25rem;    /* optional: rounded corners */
+    cursor: pointer;           /* pointer on hover */
+    font-weight: bold;         /* optional: make text bold */
+}
+
+/* Optional: add hover effect */
+button.trial:hover {
+    background-color: #371fd1de; /* darker blue on hover */
 }

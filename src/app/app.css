@@ -3,7 +3,6 @@
     flex-direction: column; /* stack top-menu on top */
     height: 100vh; /* full screen height */
     width: 100%;   /* use 100% instead of 100vw to avoid scrollbar issue */
-    overflow: hidden; /* remove unwanted scrollbars */
     box-sizing: border-box;
 }
 
@@ -15,7 +14,7 @@
 
 /* Top menu */
 app-top-menu {
-    height: 10%; /* adjust height as needed */
+    height: 12%; /* adjust height as needed */
     width: 100%;
     background-color: #f6f6eb;
 }
@@ -24,20 +23,26 @@ app-top-menu {
 .content {
     display: flex;
     flex: 1; /* take remaining height */
-    width: 100%;
-    overflow: hidden; /* prevent children from causing scroll */
+    margin: 0 auto; /* center horizontally */
+    width: 85%; /* default for large screens */
+    padding-top: 5%; /* space below the top menu */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* smaller screens take 90% */
+    }
 }
 
 /* Side menu */
 app-side-menu {
     flex: 0 0 25%; /* fixed 25% width, no shrink */
     background-color: #ffffff;
-    overflow: auto; /* allow inner scroll if content overflows */
 }
 
 /* Main display */
 app-main-display {
     flex: 1; /* take remaining width */
     background-color: #fff;
-    overflow: auto; /* allow scrolling inside if content is too large */
 }

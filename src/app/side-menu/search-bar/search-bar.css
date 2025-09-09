@@ -1,0 +1,43 @@
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-size: 17px; 
+    color: #636363;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 70%;  
+    height: 36px; /* set explicit height for input and icon alignment */
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 100%; /* fill the wrapper */
+    padding-left: 36px; /* space for icon */
+    border: 2px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-wrapper input:focus {
+    border-color: #381fd1;
+}
+
+/* Icon inside input */
+.input-wrapper .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%; /* 80% of input height */
+    width: auto;
+    pointer-events: none;
+}

@@ -1,0 +1,20 @@
+<li>
+    <button [class.active]="active" (click)="onActivated()">
+        {{label}}
+    </button>
+    @if (active)
+    {
+        <ul class="submenu">
+            @for (item of categories; track item.id)
+            {
+                <app-menu-item 
+                    [id]="item.id" 
+                    [label]="item.label" 
+                    [selected]="selectedItemID === item.id" 
+                    (clicked)="onClicked($event)" 
+                />
+            }
+        </ul>
+        
+    }
+</li>
