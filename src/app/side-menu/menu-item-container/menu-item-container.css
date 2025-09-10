@@ -1,14 +1,23 @@
-/* Button styling */
 button {
-    background: none;
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-size: 15px; 
-    font-weight: bold;
-    color: #aca9c0;
-    padding: 12px 18px;
-    border-radius: 4px;
-    transition: border-color 0.2s ease;
+  background: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  color: #aca9c0;
+  padding: 12px 18px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+
+  display: flex;                 /* enable flexbox */
+  justify-content: space-between; /* push text left, img right */
+  align-items: center;           /* vertically center */
+  gap: 8px;                      /* optional spacing between text and img */
+}
+
+button img {
+  width: 16px;   /* adjust size as needed */
+  height: auto;
 }
 
 button:hover {

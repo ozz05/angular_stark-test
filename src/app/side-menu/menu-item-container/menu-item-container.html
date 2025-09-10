@@ -1,6 +1,7 @@
 <li>
     <button [class.active]="active" (click)="onActivated()">
         {{label}}
+        <img [src]="active ? 'assets/arrow-up.png' : 'assets/arrow-down.png'" alt="">
     </button>
     @if (active)
     {

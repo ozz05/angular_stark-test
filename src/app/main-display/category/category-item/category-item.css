@@ -11,6 +11,11 @@
     overflow: hidden;
 }
 
+.container:hover {
+    border-color: #8a8989; /* or any color you want */
+    cursor: pointer;       /* optional, makes it feel clickable */
+}
+
 .container .content {
     display: flex;
     flex-direction: column;
