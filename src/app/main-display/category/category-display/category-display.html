@@ -1,0 +1,25 @@
+<div class="conteiner">
+    <h2>
+        {{categoryFromID}}
+    </h2>
+    <div class="content">
+        @if(selectedItem === "c1")
+        {
+            @for (category of categoryData; track category.id) 
+            {
+                <app-category-item [categoryData]="category"/>
+            }
+        }
+        @else
+        {
+            @for (category of categoryData; track category.id) 
+            {
+                @if(selectedItem === category.categoryID)
+                {
+                    <app-category-item [categoryData]="category"/>
+                }
+            }
+        }
+        
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <app-top-menu/>
 <div class="content">
     <app-side-menu [selectedItem]="selectedMenuItemID" (menuItemSelected)="onSelectedMenuItem($event)"/>
-    <app-main-display/>
+    <app-main-display [selectedItem]="selectedMenuItemID"/>
 </div>

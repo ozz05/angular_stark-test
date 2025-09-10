@@ -1,0 +1,16 @@
+<div class="conteiner">
+    <h2>
+        {{previewData.title}}
+    </h2>
+    <h3>
+        {{previewData.description}}
+    </h3>
+    <div class="content">
+        @for (category of categoryData; track category.id) {
+            @if(category.new)
+            {
+                <app-category-item [categoryData]="category"/>
+            }
+        }
+    </div>
+</div>

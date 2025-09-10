@@ -1,0 +1,78 @@
+.container {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative; /* icon positioning relative to content */
+}
+
+/* Icon */
+.container .content .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Category text */
+.container .content .category {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 0;
+    color: #381fd1;
+}
+
+/* Title text */
+.container .content .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+/* Responsive scaling */
+@media (max-width: 1024px) {
+    .container .content .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container .content .category {
+        font-size: 0.9rem;
+    }
+
+    .container .content .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container .content .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .container .content .category {
+        font-size: 1rem;
+    }
+
+    .container .content .title {
+        font-size: 1.5rem;
+    }
+}

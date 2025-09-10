@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MenuItem } from '../menu-item/menu-item';
-import { menuCategories } from './categories';
+import { menuCategories } from '../../categories-menu';
 @Component({
   selector: 'app-menu-item-container',
   imports: [MenuItem],

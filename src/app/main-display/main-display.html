@@ -1,1 +1,23 @@
-<p>main-display works!</p>
+<div>
+    @if(selectedItem === "home")
+    {
+        @for(data of previewData; track data.id)
+        {
+            @if(data.collection)
+            {
+                <app-collection-preview [previewData]="data"></app-collection-preview>
+            }
+            @else {
+                <app-category-preview [previewData]="data" ></app-category-preview>
+            }
+        }
+    }
+    @else if (selectedItem === "collections") 
+    {
+        <app-collection-display/>
+    }
+    @else 
+    {
+        <app-category-display [selectedItem]="selectedItem"/>
+    }
+</div>
