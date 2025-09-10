@@ -1,57 +1,62 @@
-:host {
+/* Top menu container */
+.top-menu {
   display: flex;
-  justify-content: center; /* center the inner content */
+  justify-content: center;         /* center the whole content */
   align-items: center;
   width: 100%;
   background-color: #f6f6eb;
   box-sizing: border-box;
+  padding: 1rem 0;
 }
 
-/* Limit inner content to 70% */
-.top-menu {
+/* Inner content wrapper for menu and login */
+.top-menu .content {
   display: flex;
-  justify-content: space-between; /* logo+menu left, logIn right */
-  align-items: center;
-  width: 70%; /* this makes everything inside take 70% */
+  justify-content: space-between;  /* menu left, login right */
+  align-items: center;             /* vertically center */
+  width: 70%;                      /* default width */
 }
 
-
-
-/* Menu and LogIn lists */
+/* Menu and login lists */
 .menu ul,
 .logIn ul {
   display: flex;
+  align-items: center;             /* vertically center buttons and logo */
+  justify-content: center;         /* center horizontally */
   list-style: none;
-  margin: 10px;
+  margin: 0;
   padding: 0;
+  gap: 10px;                       /* space between buttons */
 }
 
+/* Logo */
 .menu img {
   height: 40px;
   margin-right: 16px;
 }
 
-/* Base button styles */
+/* Base buttons */
 button {
-  display: inline-flex;          /* center content */
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 48px;                  /* fixed height for all buttons */
-  min-width: 120px;              /* enforce minimum width */
-  padding: 0 1.5rem;             /* horizontal padding */
-  margin: 0 5px;                 /* spacing between buttons */
-  background: none;
-  border: 2px solid transparent;
-  cursor: pointer;
+  height: 48px;                    /* fixed height */
+  min-width: 120px;                /* minimum width */
+  padding: 0 1rem;                 /* horizontal padding */
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0px;
   font-family: sans-serif;
   color: #381fd1;
+  background: none;
+  border: 2px solid transparent;
   border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;          /* include padding/border in size */
+  white-space: nowrap;             /* prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;         /* trim text if too long */
   transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
-  box-sizing: border-box;        /* include padding/border in height */
 }
 
 /* Hover effect */
@@ -59,14 +64,49 @@ button:hover {
   border-color: #381fd1;
 }
 
-/* Trial button variant */
+/* Trial button */
 button.trial {
   background-color: #381fd1;
   color: white;
   border: none;
 }
 
-/* Trial hover effect */
 button.trial:hover {
   background-color: #371fd1de;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (tablet) */
+@media (max-width: 1024px) {
+  .top-menu .content {
+    width: 90%;
+    flex-wrap: wrap;               /* wrap buttons if necessary */
+    gap: 10px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .top-menu .content {
+    width: 100%;
+    flex-direction: column;        /* stack menu and login vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu ul,
+  .logIn ul {
+    justify-content: center;       /* center buttons in each row */
+    flex-wrap: wrap;               /* wrap buttons if needed */
+  }
+
+  button {
+    min-width: 100px;              /* slightly smaller min width for mobile */
+    font-size: 0.9rem;             /* smaller text on mobile */
+  }
+
+  .menu img {
+    margin: 0 0 10px 0;            /* spacing below logo */
+  }
 }

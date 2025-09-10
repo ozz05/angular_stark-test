@@ -14,5 +14,7 @@ export class MenuItem {
   
   onClick(): void {
     this.clicked.emit(this.id);
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

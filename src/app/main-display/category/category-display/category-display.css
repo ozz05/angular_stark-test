@@ -1,6 +1,31 @@
+
+/* Main title */
+h2 {
+    font-size: 2.5rem;     /* bigger */
+    font-weight: bold;     /* bold letters */
+    color: #000;           /* black */
+    margin: 0 0 0.5rem 0;  /* optional spacing below */
+    font-family: sans-serif; /* clean sans-serif */
+}
+
+/* Subtitle / description */
+h3 {
+    font-size: 1rem;       /* smaller */
+    font-weight: normal;   /* not bold */
+    color: #555;           /* dark grey */
+    margin: 0 0 1rem 0;    /* optional spacing below */
+    font-family: sans-serif; /* clean sans-serif */
+}
+
+.divider {
+  height: 65vh;          /* 30% of screen height */
+  width: 100%;           /* full width */
+  display: block;        /* ensure it behaves as a block element */
+}
+
 .content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* default: 3 columns */
+    grid-template-columns: repeat(2, 1fr); /* default: 3 columns */
     gap: 2rem;
     margin-top: 1rem;
 }
@@ -8,7 +33,7 @@
 /* Category items */
 .content app-category-item {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* square by default */
+    aspect-ratio: 3 / 2; /* width:height ratio → rectangular */
 }
 
 /* Medium screens (tablet) → rectangular, 2 per row */

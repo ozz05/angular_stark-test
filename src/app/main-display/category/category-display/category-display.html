@@ -2,9 +2,17 @@
     <h2>
         {{categoryFromID}}
     </h2>
+    <h3>
+        {{categoryDescriptionFromID}}
+    </h3>
+    @if(selectedItem === "c1")
+    {
+        <app-divider-item class="divider"/>
+    }
     <div class="content">
         @if(selectedItem === "c1")
         {
+            
             @for (category of categoryData; track category.id) 
             {
                 <app-category-item [categoryData]="category"/>
